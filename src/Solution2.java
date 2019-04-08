@@ -6,16 +6,16 @@ public class Solution2 {
         long sumValue = listNodeIntValue(l1) + listNodeIntValue(l2);
         System.out.println(sumValue);
 
-        /*if(sumValue == 0){
-         //result = new ListNode(sumValue);
+        if(sumValue == 0){
+         result = new ListNode((int)sumValue);
         }
         else {
             while (sumValue != 0) {
-                int val = sumValue % 10;
+                int val = (int)(sumValue % 10);
                 result = insert(result, val);
                 sumValue = sumValue / 10;
             }
-        }*/
+        }
         return result;
     }
 
