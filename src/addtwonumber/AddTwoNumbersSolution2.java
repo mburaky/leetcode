@@ -1,4 +1,6 @@
-public class Solution2 {
+package addtwonumber;
+
+public class AddTwoNumbersSolution2 {
 
     public ListNode addTwoNumbers(ListNode l1, ListNode l2) {
        ListNode result = null;

@@ -1,4 +1,4 @@
-/* -----------------------------------
+package addtwonumber;/* -----------------------------------
  *  WARNING:
  * -----------------------------------
  *  Your code may fail to compile
@@ -8,11 +8,13 @@
  *  "public" keyword from your class
  *  declarations.
  */
+import addtwonumber.ListNode;
+
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 
-public class Main {
+public class AddTwoNumbersMain {
 
     public static int[] stringToIntegerArray(String input) {
         input = input.trim();
@@ -65,7 +67,7 @@ public class Main {
             line = in.readLine();
             ListNode l2 = stringToListNode(line);
 
-            ListNode ret = new Solution2().addTwoNumbers(l1, l2);
+            ListNode ret = new AddTwoNumbersSolution().addTwoNumbers(l1, l2);
 
             String out = listNodeToString(ret);
 
