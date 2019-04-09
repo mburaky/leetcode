@@ -7,23 +7,33 @@ public class Solution {
         int tempMax = 0;
         int maxLength = 0 ;
         for(int i = 0; i <= s.length()-1; i++){
-            for(int j = i+1; j <= s.length()-1; j++){
-                char c = s.charAt(j);
+            for(int j = i+1; j <= s.length(); j++){
+                char c = s.charAt(j-1);
                 String temp = s.substring(i,j);
                 if(temp.length() == 1){
-                    maxLength++;
+                    maxLength = maxLength + 1;
                     continue;
                 }else{
-                    if(!temp.contains(""+c)){
-                        maxLength++;
+                    if(!s.substring(i,j-1).contains(""+c)){
+                        maxLength = maxLength + 1;
+                        if(maxLength == s.length()){
+                            tempMax = maxLength;
+                        }
                     }
                     else{
-                        tempMax = maxLength;
+                        if(maxLength > tempMax) {
+                            tempMax = maxLength;
+                        }
                         maxLength=0;
+                        break;
                     }
                 }
             }
         }
-        return maxLength;
+        if(s.length() == 1){
+            return 1;
+        }
+
+        return tempMax;
     }
 }
