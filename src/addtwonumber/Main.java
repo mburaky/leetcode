@@ -1,14 +1,4 @@
-package addtwonumber;/* -----------------------------------
- *  WARNING:
- * -----------------------------------
- *  Your code may fail to compile
- *  because it contains public class
- *  declarations.
- *  To fix this, please remove the
- *  "public" keyword from your class
- *  declarations.
- */
-
+package addtwonumber;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
