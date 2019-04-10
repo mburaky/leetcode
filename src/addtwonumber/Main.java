@@ -8,13 +8,12 @@ package addtwonumber;/* -----------------------------------
  *  "public" keyword from your class
  *  declarations.
  */
-import addtwonumber.ListNode;
 
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 
-public class AddTwoNumbersMain {
+public class Main {
 
     public static int[] stringToIntegerArray(String input) {
         input = input.trim();
@@ -67,7 +66,7 @@ public class AddTwoNumbersMain {
             line = in.readLine();
             ListNode l2 = stringToListNode(line);
 
-            ListNode ret = new AddTwoNumbersSolution().addTwoNumbers(l1, l2);
+            ListNode ret = new Solution().addTwoNumbers(l1, l2);
 
             String out = listNodeToString(ret);
 
