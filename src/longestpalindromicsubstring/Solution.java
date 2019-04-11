@@ -33,6 +33,7 @@ public class Solution {
                 isPalindrome = true;
             }else{
                 isPalindrome = false;
+                break;
             }
             j--;
             i++;
