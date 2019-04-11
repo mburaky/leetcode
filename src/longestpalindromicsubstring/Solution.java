@@ -2,10 +2,21 @@ package longestpalindromicsubstring;
 
 public class Solution {
     public String longestPalindrome(String s) {
-
-        System.out.println(isPalindrome(s));
-
-        return "";
+        String longestPalindrome = "";
+        int maxLength = 0;
+        for(int i = 0; i< s.length(); i++){
+            for(int j = i+1; j <= s.length(); j++){
+                String temp = s.substring(i,j);
+                if(isPalindrome(temp)){
+                    int palindromeLength = temp.length();
+                    if(palindromeLength > maxLength){
+                        longestPalindrome = temp;
+                        maxLength = palindromeLength;
+                    }
+                }
+            }
+        }
+        return longestPalindrome;
     }
 
     public boolean isPalindrome(String s){
